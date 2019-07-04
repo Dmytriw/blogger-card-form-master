@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <script type="text/javascript" src="js/pureJSCalendar.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="header" id="header"><div class="container" id="to-include"></div></header>    
+    <main class="main">
+        <div class="container">
+            <div class="form form--1" id="form--1">
+                <div class="inner-container">
+                    <div class="title-part">
+                        <h2 class="title-part__title">Оставить отзыв на блогера</h2>
+                        <span class="title-part__step subtitle gray-text">Шаг 1 из 2</span>
+                    </div>
+                    <div class="form-part ad-mode" id="ad-mode">
+                        <h3 class="form-part__title">Какой вы рекламировали аккаунт</h3>
+                        <div class="row">
+                            <button class="button" id="button--blogger">Блогера</button>
+                            <button class="button" id="button--commerce">Коммерческий</button>
+                        </div>
+                        <span class="warning">Выберите вариант, чтобы продолжить</span>
+                    </div>
+                    <div class="form-part">
+                        <h3 class="form-part__title">Ссылка на аккаунт заказчика</h3>
+                        <input type="text" class="input">
+                        <span class="warning">Заполните это поле, чтобы продолжить</span>
+                        <span class="warning warning--chars">Название аккаунта блогера не должно содержать русских букв или эмоджи</span>
+                    </div>
+                    <div class="form-part">
+                        <h3 class="form-part__title">Ссылка на аккаунт исполнителя</h3>
+                        <input type="text" class="input">
+                        <span class="warning">Заполните это поле, чтобы продолжить</span>
+                        <span class="warning warning--chars">Название аккаунта блогера не должно содержать русских букв или эмоджи</span>
+                    </div>
+                    <div class="form-part" id="calendar">
+                        <h3 class="form-part__title">Дата выхода рекламы</h3>
+                        <input id="txtTest" placeholder="ДД.ММ.ГГ." class="form-part__input input" type="button" value="ДД.ММ.ГГ." onclick="pureJSCalendar.open('dd.MM.yyyy', 0, 0, 1, '2018-5-5', '2019-8-20', 'txtTest', 20)" >
+                        <span class="warning">Заполните это поле, чтобы продолжить</span>
+                    </div>
+                    <div class="form-part worth only-commerce">
+                        <h3 class="form-part__title">Реклама окупилась</h3>
+                        <div class="row">
+                            <button class="button" id="button--yes">Да</button>
+                            <button class="button" id="button--no">Нет</button>
+                        </div>
+                        <span class="warning">Выберите вариант, чтобы продолжить</span>
+                    </div>
+                    <div class="form-part price">
+                        <h3 class="form-part__title">Цена за рекламу в ₽</h3>
+                        <div class="row form-part">
+                            <input type="number" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" class="input">
+                            <div class="only-blogger">
+                                <div class="boxes">
+                                    <div class="option-with-tooltip">
+                                        <div class="option">
+                                            <div class="option__select"></div>
+                                            <span class="option__title">Взаимопиар</span>
+                                        </div>
+                                        <button class="tooltip" id="tooltip">?</button>
+                                        <div class="tooltip__frame" id="tooltip__frame">Взаимопиар (ВП) — когда идет бесплатный обмен рекламой между двумя аккаунтами</div>
+                                    </div>
+                                    <div class="option unlock">
+                                        <div class="option__select"></div>
+                                        <span class="option__title">ВП + доплата</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="only-commerce">
+                                <div class="boxes">
+                                    <div class="option">
+                                        <div class="option__select"></div>
+                                        <span class="option__title">Бартер</span>
+                                    </div>
+                                    <div class="option unlock">
+                                        <div class="option__select"></div>
+                                        <span class="option__title">Бартер + доплата</span>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="not-chosen">
+                                <div class="boxes">
+                                    <div class="option-with-tooltip">
+                                        <div class="option">
+                                            <div class="option__select"></div>
+                                            <span class="option__title">Взаимопиар</span>
+                                        </div>
+                                        <button class="tooltip">?</button>
+                                        <div class="tooltip__frame">Взаимопиар (ВП) — когда идет бесплатный обмен рекламой между двумя аккаунтами</div>
+                                    </div>
+                                    <div class="option unlock">
+                                        <div class="option__select"></div>
+                                        <span class="option__title">ВП + доплата</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="warning">Заполните это поле или выберите чекбокс, чтобы продолжить</span>
+                        </div>
+                    </div>
+                    <div class="form-part">
+                        <h3 class="form-part__title">Приход подписчиков</h3>
+                        <input type="number" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" class="input">
+                        <span class="warning">Заполните это поле, чтобы продолжить</span>
+                    </div>    
+                </div>
+                <div class="bottom-part">
+                    <div class="inner-container">
+                        <button class="bottom-part__button bottom-part__button--disabled button" id="button__control--1">Сброс</button>
+                        <button class="bottom-part__button bottom-part__button--disabled button" id="button__control--2">Далее</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form form--hidden form--2" id="form--2">
+                <div class="inner-container">
+                    <div class="title-part">
+                        <h2 class="title-part__title">Оставить отзыв на блогера</h2>
+                        <span class="title-part__step subtitle gray-text">Шаг 2 из 2</span>
+                    </div>
+                    <div class="form-part rate" id="rate">
+                        <h3 class="form-part__title">Оцените рекламу <i class="custom-star icon-star">&#xe800;</i> <span id="rating"></span> </h3>
+                        <div class="row">
+                            <div class="stripe"></div>
+                            <input type="range" id="level" min="1" value="0" max="10">
+                        </div>
+                        <div class="numbers">
+                            <span class="subtitle gray-text">1</span>
+                            <span class="subtitle gray-text">10</span>
+                        </div>
+                        <span class="warning">Выберите оценку передвигая ползунок, чтобы продолжить</span>
+                    </div>
+                    <div class="form-part formats" id="formats">
+                        <h3 class="form-part__title">Формат рекламы</h3>
+                        <div class="row">
+                            <button class="button format-button">Сторис</button>
+                            <button class="button format-button">Фото-пост</button>
+                            <button class="button format-button">Видео-пост</button>
+                            <button class="button format-button">Эфир</button>
+                        </div>
+                        <span class="warning">Выберите вариант, чтобы продолжить</span>
+                    </div>
+                    <div class="form-part only-blogger">
+                        <h3 class="form-part__title">Тема аккаунта заказчика</h3>
+                        <div class="dropdown" id="dropdown">
+                            <div class="dropdown__body" id="dropdown__body">
+                                <span class="dropdown__text">Выберите из списка (максимум 3 темы)</span>
+                            </div>
+                            <div class="list" id="dropdown__list">
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Бьюти</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Жизнь заграницей</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Здоровье</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">ЗОЖ</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Изучение языков</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Книги</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Лайфстайл</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Мамы</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Мода и стиль</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Мотивация</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Наука</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Обработка фото</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Образование</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Отношения</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Похудение</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">ПП</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Психология</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Путешествия</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Ремонт и интерьер</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Рецепты</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Саморазвитие</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Секс</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Семья</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Социальные темы</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Феминизм</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Фитнес</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Шоппинг</h6>
+                                </div>
+                                <div class="option dropdown-option">
+                                <div class="option__select"></div>
+                                <h6 class="option__title">Нет отзывов</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="warning">Выберите одну или несколько тем из списка, чтобы продолжить</span>
+                    </div>
+                    <div class="form-part only-commerce">
+                        <h3 class="form-part__title">Что вы рекламировали</h3>
+                        <input placeholder="Название товара/услуги" type="text" class="input">
+                        <span class="warning">Заполните это поле, чтобы продолжить</span>
+                    </div>
+                    <div class="form-part upload">
+                        <h3 class="form-part__title">Скриншоты переходов</h3>
+                        <div class="files-load">
+                            <input type="file" accept="image/*" class="files-load__real-load input" name="files[]" hidden="hidden">                            
+                            <button type="button" id="custom-file" class="files-load__button button">Загрузить скриншоты</button>
+                            <div class="files-status">
+                                <span class="files-status__title"><span class="files-status__files"></span></span>
+                                <span class="files-status__remove no-file-chosen">Файл не выбран</span>
+                                <span class="files-status__remove remove-file">Удалить</span>
+                            </div>
+                        </div>
+                        <span class="warning">Загрузите один или несколько скриншотов, чтобы продолжить</span>
+                    </div>
+                    <div class="form-part">
+                        <h3 class="form-part__title">Текст отзыва <span class="gray-text">- не обязательно</span></h3>
+                        <textarea type="text" class="input textarea"></textarea>
+                    </div>
+                    <div class="form-part">
+                        <div class="option necessary-option" id="necessary-checkbox">
+                            <div class="option__select"></div>
+                            <span class="option__title">Я соглашаюсь с <a href="#" class="link">Правилами публикации отзывов</a></span>
+                        </div>
+                        <span class="warning">Выберите этот чекбокс, чтобы продолжить</span>
+                    </div>
+                </div>
+                <div class="bottom-part">
+                    <div class="inner-container">
+                        <button class="bottom-part__button button" id="button__control--3">Назад</button>
+                        <button class="bottom-part__button button" id="button__control--4">Отправить отзыв</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form form--hidden form--3" id="form--3">
+                <div class="container">
+                    <img src="img/done_icon.png" alt="" class="form--3__image">
+                    <h2 class="form--3__message">Отзыв отправлен на модерацию</h2>
+                    <button class="form--3__button button" id="another-one">Оставить ещё один отзыв</button>                    
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/index.js"></script>
+
+</html>

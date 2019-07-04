@@ -1,0 +1,385 @@
+.form
+    width: 430px
+    background-color: #fff
+    border-radius: 10px
+    box-shadow: 0px 3px 10px rgba(0, 73, 129, 0.1)
+    margin: auto
+    &--hidden
+        display: none
+    &.form--1
+        & > .inner-container
+            padding-bottom: 0
+    &:not(.form--commerce)
+        .only-commerce
+            display: none
+    &:not(.form--blogger)
+        .only-blogger
+            display: none
+    &--blogger
+        .not-chosen
+            display: none
+        .form-part
+            &.ad-mode
+                .row
+                    .button
+                        &:first-child
+                            border: none
+                            background-color: $button-color
+                            color: white
+    &--commerce
+        .not-chosen
+            display: none
+        .form-part
+            &.ad-mode
+                .row
+                    .button
+                        &:last-child
+                            border: none
+                            background-color: $button-color
+                            color: white
+    .input
+        width: 100%
+        //color: $after-color-1
+        color: $primary-text
+        text-align: left
+        &:focus
+            color: $primary-text
+    .inner-container
+        padding: 30px 57px
+    .title-part
+        margin-bottom: 20px
+        &__title
+            margin-bottom: 6px
+        &__step
+    .form-part
+        margin-bottom: 18px
+        &__title
+            font-size: 16px
+            margin-bottom: 8px
+        .row
+            display: flex
+            .button
+                width: 50%
+        &:not(.form-part--warning):not(.price)
+            .warning
+                display: none
+        &--warning
+            &-chars
+                .warning
+                    display: none
+                .warning--chars
+                    display: inline !important
+            .input:not(.textarea), .button
+                border-color: #FF0000 !important
+            .level
+                border: 1px solid #FF0000
+            input[type=range]
+                &::-webkit-slider-thumb
+                    border: 1px solid #FF0000
+            .dropdown
+                border: 1px solid #FF0000
+            .warning
+                width: 100%
+                font-size: 12px
+                margin-top: 6px
+                color: #FF0000
+                &--chars
+                    display: none
+            .option
+                &__select
+                    &::before
+                        border-color: #FF0000 !important
+        &.ad-mode, &.worth
+            .row
+                .button
+                    background-color: #fff
+                    box-shadow: none
+                    border: 1px solid #D5DFE4
+                    color: $primary-text
+                    &:first-child
+                        border-top-right-radius: 0
+                        border-bottom-right-radius: 0
+                    &:last-child
+                        border-top-left-radius: 0
+                        border-bottom-left-radius: 0
+                        border-left: none
+                    &--active
+                        border: none
+                        background-color: $button-color
+                        color: white
+        &.price
+            .row
+                display: flex
+                align-items: center
+                flex-wrap: wrap
+            .input
+                max-width: 154px
+            .boxes
+                display: flex
+                flex-direction: column
+                margin-left: 15px
+                .option-with-tooltip
+                    display: flex
+                    position: relative
+                    &:not(.option-with-tooltip--active)
+                        .tooltip__frame
+                            display: none
+                    .tooltip
+                        margin-top: 2px
+                        margin-left: 5px
+                        width: 12px
+                        height: 12px
+                        background-color: $after-color-1
+                        border: none
+                        outline: none
+                        cursor: pointer
+                        border-radius: 50%
+                        font-size: 9px
+                        padding: 0
+                        padding-left: 1px
+                    .tooltip__frame
+                        position: absolute
+                        top: 16px
+                        font-size: 14px
+                        line-height: 17px
+                        width: 187px
+                        background-color: $primary-text
+                        color: white
+                        padding: 5px 10px
+                        border-radius: 5px
+                        z-index: 21
+                .option
+                    height: 15px
+                    margin-top: 0
+                    &:first-child
+                        margin-bottom: 5px
+
+    .bottom-part
+        background-color: #F8F8F8
+        border-radius: 0px 0px 10px 10px
+        .inner-container
+            width: 100%
+            justify-content: space-between
+            display: flex
+            padding: 20px 57px
+        &__button
+            width: 120px
+            &:not(.bottom-part__button--disabled)
+                &:first-child
+                    border: 1px solid $after-color-2
+                    background: #fff !important
+                    color: $primary-text
+            &--disabled
+                box-shadow: none
+                &:first-child
+                    border: 1px solid $after-color-2
+                    background-color: transparent
+                    color: $after-color-1
+                &:last-child
+                    background-color: $after-color-1
+                    color: white
+.form--2
+    & > .inner-container
+        padding-bottom: 0 !important
+    .fa-star
+        color: #FBC400
+    .rate
+        .row
+            margin-top: 15px !important
+            position: relative
+            width: 100%
+            *
+                -webkit-user-select: none
+                -moz-user-select: none
+                -ms-user-select: none
+                -o-user-select: none
+                user-select: none
+            .level
+                width: 18px
+                height: 18px
+                background-color: #fff
+                border-radius: 50%
+                position: absolute
+                z-index: 2
+                top: -8px
+                transform: translateX(-50%)
+                box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15)
+            .stripe
+                display: block
+                position: absolute
+                width: 100%
+                height: 1px
+                top: 9px
+                z-index: 1
+                background-color: $after-color-2
+        .numbers
+            display: flex
+            justify-content: space-between
+            margin: auto
+            margin-top: 3px
+            width: calc(100% - 7px)
+    .formats
+        .row
+            width: 100%
+            flex-wrap: wrap
+            justify-content: space-between
+            .button
+                box-shadow: none
+                background-color: #fff
+                color: $primary-text
+                border: 1px solid $after-color-2
+                border-radius: 0
+                position: relative
+                width: calc(50% - 10px)
+                margin-bottom: 10px
+                text-align: left
+                padding-left: 32px
+                &:before
+                    content: ''
+                    position: absolute
+                    width: 16px
+                    height: 16px
+                    top: 8px
+                    left: 9px
+                    border: 1px solid #D5DFE4
+                    border-radius: 50%
+                &:after
+                    content: ''
+                    position: absolute
+                    width: 10px
+                    height: 10px
+                    top: 12px
+                    background-color: #fff
+                    left: 13px
+                    border-radius: 50%
+                &--active
+                    background-color: $button-color
+                    border-color: $button-color
+                    color: white
+                    &:before
+                        border: 1px solid #fff
+                &:first-child
+                    border-top-left-radius: 5px
+                    border-bottom-left-radius: 5px
+                &:nth-child(3)
+                    margin-bottom: 0
+                &:last-child
+                    border-top-right-radius: 5px
+                    border-bottom-right-radius: 5px
+                    margin-bottom: 0
+    .form-part
+        .textarea
+            height: 180px
+        .option
+            align-items: flex-start
+            .option__select
+                margin-top: 2px
+        .gray-text
+            color: $after-color-1
+    .upload
+        .files-load
+            width: 100%
+            font-size: 14px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            position: relative
+            &--file-loaded
+                .files-status
+                    &__remove
+                        &.no-file-chosen
+                            display: none
+                        &.remove-file
+                            display: inline
+            &__button
+                width: 168px !important
+                min-width: 168px !important
+            &:not(.files-load--file-loaded)
+                .files-status
+                    &__remove
+                        &:first-child
+                            display: inline
+                        &:last-child
+                            display: none
+            .files-status
+                position: absolute
+                right: 0
+                width: calc(100% - 178px)
+                &--rtl
+                    .files-status__title
+                        text-align: right
+                        float: right
+                        width: 100%
+                        overflow: hidden
+                        text-overflow: ellipsis
+                        direction: rtl
+                &__title
+                    height: 18px !important
+                &__remove
+                    color: $after-color-1
+                    text-align: left
+    .bottom-part
+        &__button
+            &:last-child
+                width: auto
+                padding-left: 14px
+                padding-right: 15px
+.form--3
+    height: 230px
+    .container
+        width: 100%
+        height: 100%
+        display: flex
+        padding: 30px 28px
+        justify-content: space-around
+        flex-direction: column
+        align-items: center
+    &__message
+        font-size: 24px
+        text-align: center
+    &__button
+        width: auto
+        box-shadow: none
+        border: 1px solid $after-color-2
+        background-color: transparent
+        color: $primary-text
+
+@media (max-width: 483px)
+    .form
+        width: 100%
+        .inner-container
+            padding: 20px 15px
+        .title-part
+            &__title
+                font-size: 22px
+        .bottom-part
+            & > .inner-container
+                padding: 20px 15px
+        .form-part
+            .format-button
+                padding-left: 9px
+                padding-right: 9px
+            &.price
+                display: flex
+                flex-direction: column
+                .row
+                    flex-direction: column
+                    .input
+                        max-width: 100%
+                        width: 100%
+                .only-blogger, .only-commerce, .not-chosen
+                    width: 100%
+                .boxes
+                    flex-direction: row
+                    margin-top: 14px
+                    justify-content: space-between
+                    margin-left: 0
+    .form--3
+        height: 265px
+        .container
+            padding: 30px 15px
+            justify-content: space-between
+        &__message
+            font-size: 22px
+            text-align: center
+        &__button
